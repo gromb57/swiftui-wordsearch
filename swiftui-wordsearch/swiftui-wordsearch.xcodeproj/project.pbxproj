@@ -8,17 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		A041A7872A168BA0002F6188 /* swiftui_wordsearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7862A168BA0002F6188 /* swiftui_wordsearchApp.swift */; };
-		A041A7892A168BA0002F6188 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7882A168BA0002F6188 /* ContentView.swift */; };
 		A041A78B2A168BA4002F6188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A041A78A2A168BA3002F6188 /* Assets.xcassets */; };
 		A041A78E2A168BA4002F6188 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A041A78D2A168BA4002F6188 /* Preview Assets.xcassets */; };
+		A041A7982A168DC2002F6188 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7952A168DC2002F6188 /* NavigationState.swift */; };
+		A041A7992A168DC2002F6188 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7962A168DC2002F6188 /* MainRouter.swift */; };
+		A041A79A2A168DC2002F6188 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7972A168DC2002F6188 /* Routes.swift */; };
+		A041A79D2A168FD1002F6188 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A79C2A168FD1002F6188 /* MenuView.swift */; };
+		A041A79F2A169067002F6188 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A79E2A169067002F6188 /* GameView.swift */; };
+		A041A7A12A1692D5002F6188 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7A02A1692D5002F6188 /* ResultsView.swift */; };
+		A041A7A32A169327002F6188 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7A22A169327002F6188 /* CustomButtonStyle.swift */; };
+		A041A7A62A1693CC002F6188 /* LinearGradient+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7A52A1693CC002F6188 /* LinearGradient+Extension.swift */; };
+		A041A7A82A169409002F6188 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7A72A169409002F6188 /* Font+Extension.swift */; };
+		A041A7AB2A16A781002F6188 /* WordSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7AA2A16A781002F6188 /* WordSearch.swift */; };
+		A041A7AE2A16BDEF002F6188 /* Dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7AD2A16BDEF002F6188 /* Dataset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A041A7832A168BA0002F6188 /* swiftui-wordsearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-wordsearch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A041A7862A168BA0002F6188 /* swiftui_wordsearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_wordsearchApp.swift; sourceTree = "<group>"; };
-		A041A7882A168BA0002F6188 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A041A78A2A168BA3002F6188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A041A78D2A168BA4002F6188 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A041A7952A168DC2002F6188 /* NavigationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		A041A7962A168DC2002F6188 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		A041A7972A168DC2002F6188 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		A041A79C2A168FD1002F6188 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		A041A79E2A169067002F6188 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		A041A7A02A1692D5002F6188 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		A041A7A22A169327002F6188 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		A041A7A52A1693CC002F6188 /* LinearGradient+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinearGradient+Extension.swift"; sourceTree = "<group>"; };
+		A041A7A72A169409002F6188 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		A041A7AA2A16A781002F6188 /* WordSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSearch.swift; sourceTree = "<group>"; };
+		A041A7AD2A16BDEF002F6188 /* Dataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +71,14 @@
 		A041A7852A168BA0002F6188 /* swiftui-wordsearch */ = {
 			isa = PBXGroup;
 			children = (
-				A041A7862A168BA0002F6188 /* swiftui_wordsearchApp.swift */,
-				A041A7882A168BA0002F6188 /* ContentView.swift */,
 				A041A78A2A168BA3002F6188 /* Assets.xcassets */,
+				A041A7A92A16A76C002F6188 /* engine */,
+				A041A7A42A1693B0002F6188 /* extensions */,
+				A041A7AC2A16BDD1002F6188 /* model */,
+				A041A7942A168DC2002F6188 /* navigation */,
 				A041A78C2A168BA4002F6188 /* Preview Content */,
+				A041A7862A168BA0002F6188 /* swiftui_wordsearchApp.swift */,
+				A041A79B2A168FA3002F6188 /* views */,
 			);
 			path = "swiftui-wordsearch";
 			sourceTree = "<group>";
@@ -65,6 +89,52 @@
 				A041A78D2A168BA4002F6188 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A041A7942A168DC2002F6188 /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A041A7952A168DC2002F6188 /* NavigationState.swift */,
+				A041A7962A168DC2002F6188 /* MainRouter.swift */,
+				A041A7972A168DC2002F6188 /* Routes.swift */,
+			);
+			path = navigation;
+			sourceTree = "<group>";
+		};
+		A041A79B2A168FA3002F6188 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				A041A7A22A169327002F6188 /* CustomButtonStyle.swift */,
+				A041A79E2A169067002F6188 /* GameView.swift */,
+				A041A79C2A168FD1002F6188 /* MenuView.swift */,
+				A041A7A02A1692D5002F6188 /* ResultsView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		A041A7A42A1693B0002F6188 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A041A7A72A169409002F6188 /* Font+Extension.swift */,
+				A041A7A52A1693CC002F6188 /* LinearGradient+Extension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		A041A7A92A16A76C002F6188 /* engine */ = {
+			isa = PBXGroup;
+			children = (
+				A041A7AA2A16A781002F6188 /* WordSearch.swift */,
+			);
+			path = engine;
+			sourceTree = "<group>";
+		};
+		A041A7AC2A16BDD1002F6188 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A041A7AD2A16BDEF002F6188 /* Dataset.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +207,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A041A7892A168BA0002F6188 /* ContentView.swift in Sources */,
+				A041A7A32A169327002F6188 /* CustomButtonStyle.swift in Sources */,
+				A041A7A12A1692D5002F6188 /* ResultsView.swift in Sources */,
+				A041A7A62A1693CC002F6188 /* LinearGradient+Extension.swift in Sources */,
+				A041A79D2A168FD1002F6188 /* MenuView.swift in Sources */,
+				A041A7992A168DC2002F6188 /* MainRouter.swift in Sources */,
+				A041A79A2A168DC2002F6188 /* Routes.swift in Sources */,
+				A041A7AE2A16BDEF002F6188 /* Dataset.swift in Sources */,
+				A041A7A82A169409002F6188 /* Font+Extension.swift in Sources */,
+				A041A7AB2A16A781002F6188 /* WordSearch.swift in Sources */,
+				A041A7982A168DC2002F6188 /* NavigationState.swift in Sources */,
 				A041A7872A168BA0002F6188 /* swiftui_wordsearchApp.swift in Sources */,
+				A041A79F2A169067002F6188 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +355,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +385,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

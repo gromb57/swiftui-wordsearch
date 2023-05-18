@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct swiftui_wordsearchApp: App {
+    @StateObject private var navigationState = NavigationState()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //NavigationView(path: $navigationState.routes) {
+            NavigationView() {
+                MenuView()
+                    /*.navigationDestination(for: Routes.self) { route in
+                        switch route {
+                        case .mainNavigation(let routes):
+                            MainRouter(routes: routes).configure()
+                        }
+                    }*/
+            }
+            .navigationViewStyle(.stack)
+            .environmentObject(navigationState)
         }
     }
 }
