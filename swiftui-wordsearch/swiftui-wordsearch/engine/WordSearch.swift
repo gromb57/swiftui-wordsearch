@@ -26,12 +26,17 @@ struct WordSearch {
         var dy: Int
     }
     
-    typealias Grid = [[String]]
+    typealias Grid = [[Letter]]
     
     struct WordSearchInfo: Hashable {
         var grid: Grid
         var solved: Grid
         var unplaced: [String]
+    }
+
+    struct Letter: Hashable {
+        var value: String
+        var id: Int
     }
     
     var words: [String]
@@ -66,7 +71,7 @@ struct WordSearch {
         }
 
         // populate the grid with empty arrays
-        var grid: Grid = Array(repeating: Array(repeating: "", count: self.width), count: self.height)
+        var grid: Grid = Array(repeating: Array(repeating: Letter(value: "", id: 0), count: self.width), count: self.height)
 
         var unplaced: [String] = []
 
@@ -106,7 +111,7 @@ struct WordSearch {
                 var count: Int = 0
                 let wordAsArray: [String] = word.map{String($0)}
                 for l in 0..<word.count {
-                    let charInGrid: String = grid[y][x]
+                    let charInGrid: String = grid[y][x].value
 
                     if !charInGrid.isEmpty { // check if there is a character in the grid
                         if charInGrid != wordAsArray[l] {
@@ -132,7 +137,7 @@ struct WordSearch {
                 x = ox
                 y = oy
                 for l in 0..<word.count {
-                    grid[y][x] = wordAsArray[l]
+                    grid[y][x].value = wordAsArray[l]
                     /*if opts.color {
                         grid[y][x] = "\033[" + (colorno + 41) + "m" + grid[y][x] + "\033[0m"
                     }*/
@@ -155,10 +160,11 @@ struct WordSearch {
         // put in filler characters
         for i in 0..<grid.count {
             for j in 0..<grid[i].count {
-                if grid[i][j].isEmpty {
-                    solved[i][j] = " "
+                grid[i][j].id = (i + 1) * j
+                if grid[i][j].value.isEmpty {
+                    solved[i][j].value = " "
                     let rand: Int = Int.random(in: 0..<self.letters.count)
-                    grid[i][j] = self.letters[rand]
+                    grid[i][j].value = self.letters[rand]
                 }
             }
         }

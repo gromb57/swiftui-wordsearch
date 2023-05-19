@@ -21,6 +21,8 @@
 		A041A7A82A169409002F6188 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7A72A169409002F6188 /* Font+Extension.swift */; };
 		A041A7AB2A16A781002F6188 /* WordSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7AA2A16A781002F6188 /* WordSearch.swift */; };
 		A041A7AE2A16BDEF002F6188 /* Dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7AD2A16BDEF002F6188 /* Dataset.swift */; };
+		A0C070552A17ECC2003407AF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C070542A17ECC2003407AF /* LoadingView.swift */; };
+		A0C070572A17EDEE003407AF /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C070562A17EDEE003407AF /* LoadingState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		A041A7A72A169409002F6188 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		A041A7AA2A16A781002F6188 /* WordSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSearch.swift; sourceTree = "<group>"; };
 		A041A7AD2A16BDEF002F6188 /* Dataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataset.swift; sourceTree = "<group>"; };
+		A0C070542A17ECC2003407AF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A0C070562A17EDEE003407AF /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 			children = (
 				A041A7A22A169327002F6188 /* CustomButtonStyle.swift */,
 				A041A79E2A169067002F6188 /* GameView.swift */,
+				A0C070542A17ECC2003407AF /* LoadingView.swift */,
 				A041A79C2A168FD1002F6188 /* MenuView.swift */,
 				A041A7A02A1692D5002F6188 /* ResultsView.swift */,
 			);
@@ -133,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				A041A7AD2A16BDEF002F6188 /* Dataset.swift */,
+				A0C070562A17EDEE003407AF /* LoadingState.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -215,9 +221,11 @@
 				A041A79A2A168DC2002F6188 /* Routes.swift in Sources */,
 				A041A7AE2A16BDEF002F6188 /* Dataset.swift in Sources */,
 				A041A7A82A169409002F6188 /* Font+Extension.swift in Sources */,
+				A0C070572A17EDEE003407AF /* LoadingState.swift in Sources */,
 				A041A7AB2A16A781002F6188 /* WordSearch.swift in Sources */,
 				A041A7982A168DC2002F6188 /* NavigationState.swift in Sources */,
 				A041A7872A168BA0002F6188 /* swiftui_wordsearchApp.swift in Sources */,
+				A0C070552A17ECC2003407AF /* LoadingView.swift in Sources */,
 				A041A79F2A169067002F6188 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

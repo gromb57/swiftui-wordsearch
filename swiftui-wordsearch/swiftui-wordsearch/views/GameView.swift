@@ -23,8 +23,8 @@ struct GameView: View {
                         LazyHGrid(rows: row.map({ char in
                             GridItem(.flexible())
                         })) {
-                            ForEach(row, id: \.self) { col in
-                                Text(col)
+                            ForEach(row, id: \.self.id) { col in
+                                Text(col.value)
                             }
                         }
                     }

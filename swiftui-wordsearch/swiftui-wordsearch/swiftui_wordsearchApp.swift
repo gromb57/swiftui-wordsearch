@@ -10,21 +10,25 @@ import SwiftUI
 @main
 struct swiftui_wordsearchApp: App {
     @StateObject private var navigationState = NavigationState()
+    @StateObject var loadingState: LoadingState = LoadingState()
     
     var body: some Scene {
         WindowGroup {
-            //NavigationView(path: $navigationState.routes) {
-            NavigationView() {
-                MenuView()
+            LoadingView(isLoading: .constant(loadingState.isLoading)) {
+                //NavigationView(path: $navigationState.routes) {
+                NavigationView() {
+                    MenuView()
                     /*.navigationDestination(for: Routes.self) { route in
-                        switch route {
-                        case .mainNavigation(let routes):
-                            MainRouter(routes: routes).configure()
-                        }
-                    }*/
+                     switch route {
+                     case .mainNavigation(let routes):
+                     MainRouter(routes: routes).configure()
+                     }
+                     }*/
+                }
+                .navigationViewStyle(.stack)
+                .environmentObject(navigationState)
+                .environmentObject(loadingState)
             }
-            .navigationViewStyle(.stack)
-            .environmentObject(navigationState)
         }
     }
 }

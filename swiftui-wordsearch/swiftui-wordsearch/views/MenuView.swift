@@ -11,7 +11,8 @@ import SwiftUI
 struct MenuView: View {
     @AppStorage("score") var score: Int = 0
     @EnvironmentObject private var navigationState: NavigationState
-    
+    @EnvironmentObject private var loadingState: LoadingState
+
     var body: some View {
         ZStack {
             LinearGradient.backgroundGradient.ignoresSafeArea()
@@ -27,6 +28,9 @@ struct MenuView: View {
                 NavigationLink(destination: MainRouter(routes: Routes.GameRoutes.game(wordSearch: wordSearchInfo)).configure()) {
                     Text("Start")
                 }.buttonStyle(CustomButtonStyle())
+                    .onSubmit {
+                        loadingState.isLoading.toggle()
+                    }
             }
             .foregroundColor(.white)
             .padding()
