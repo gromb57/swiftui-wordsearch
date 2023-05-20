@@ -12,25 +12,44 @@ struct MenuView: View {
     @AppStorage("score") var score: Int = 0
     @EnvironmentObject private var navigationState: NavigationState
     @EnvironmentObject private var loadingState: LoadingState
+    @State var width: Int = 20
+    @State var height: Int = 20
+    
+    let formatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.minimum = 1
+        formatter.maximum = 20
+        formatter.allowsFloats = false
+        return formatter
+    }()
 
     var body: some View {
         ZStack {
             LinearGradient.backgroundGradient.ignoresSafeArea()
             
-            VStack(spacing: 10) {
-                Text("WordSearch")
-                    .font(.primaryTitle)
-                Text("Recherche de mot")
-                    .font(.primaryContent)
-                let words: [String] = Dataset.testWords()
-                var wordSearch = WordSearch(words: words)
-                let wordSearchInfo = wordSearch.setup()
-                NavigationLink(destination: MainRouter(routes: Routes.GameRoutes.game(wordSearch: wordSearchInfo)).configure()) {
-                    Text("Start")
-                }.buttonStyle(CustomButtonStyle())
-                    .onSubmit {
-                        loadingState.isLoading.toggle()
+            CardView(height: 250) {
+                VStack(spacing: 10) {
+                    Text("WordSearch")
+                        .font(.primaryTitle)
+                    Text("Recherche de mot")
+                        .font(.primaryContent)
+                    HStack {
+                        Text("Largeur")
+                        TextField("Largeur", value: self.$width, formatter: self.formatter)
                     }
+                    .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 40))
+                    HStack {
+                        Text("Hauteur")
+                        TextField("Hauteur", value: self.$height, formatter: self.formatter)
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 40))
+                    NavigationLink("Démarrer") {
+                        self.newView()
+                    }.buttonStyle(CustomButtonStyle())
+                        .onSubmit {
+                            loadingState.isLoading.toggle()
+                        }
+                }
             }
             .foregroundColor(.white)
             .padding()
@@ -38,6 +57,13 @@ struct MenuView: View {
         .onAppear {
             score = 0
         }
+    }
+
+    func newView() -> some View {
+        let words: [String] = Dataset.testWords()
+        var wordSearch = WordSearch(words: words, width: self.width, height: self.height)
+        let wordSearchInfo = wordSearch.setup()
+        return MainRouter(routes: Routes.GameRoutes.game(wordSearch: wordSearchInfo)).configure()
     }
 }
 

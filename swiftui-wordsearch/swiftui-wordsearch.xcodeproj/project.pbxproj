@@ -23,6 +23,7 @@
 		A041A7AE2A16BDEF002F6188 /* Dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041A7AD2A16BDEF002F6188 /* Dataset.swift */; };
 		A0C070552A17ECC2003407AF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C070542A17ECC2003407AF /* LoadingView.swift */; };
 		A0C070572A17EDEE003407AF /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C070562A17EDEE003407AF /* LoadingState.swift */; };
+		A0C070592A18E335003407AF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C070582A18E335003407AF /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		A041A7AD2A16BDEF002F6188 /* Dataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataset.swift; sourceTree = "<group>"; };
 		A0C070542A17ECC2003407AF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A0C070562A17EDEE003407AF /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		A0C070582A18E335003407AF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		A041A79B2A168FA3002F6188 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				A0C070582A18E335003407AF /* CardView.swift */,
 				A041A7A22A169327002F6188 /* CustomButtonStyle.swift */,
 				A041A79E2A169067002F6188 /* GameView.swift */,
 				A0C070542A17ECC2003407AF /* LoadingView.swift */,
@@ -217,6 +220,7 @@
 				A041A7A12A1692D5002F6188 /* ResultsView.swift in Sources */,
 				A041A7A62A1693CC002F6188 /* LinearGradient+Extension.swift in Sources */,
 				A041A79D2A168FD1002F6188 /* MenuView.swift in Sources */,
+				A0C070592A18E335003407AF /* CardView.swift in Sources */,
 				A041A7992A168DC2002F6188 /* MainRouter.swift in Sources */,
 				A041A79A2A168DC2002F6188 /* Routes.swift in Sources */,
 				A041A7AE2A16BDEF002F6188 /* Dataset.swift in Sources */,

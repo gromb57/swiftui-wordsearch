@@ -17,13 +17,13 @@ struct GameView: View {
         ZStack {
             LinearGradient.backgroundGradient.ignoresSafeArea()
             VStack {
-                Text("\(score)")
-                LazyVGrid(columns: self.columns) {
-                    ForEach(wordSearch.grid, id: \.self) { row in
-                        LazyHGrid(rows: row.map({ char in
+                // Text("\(score)")
+                LazyHGrid(rows: self.rows) {
+                    ForEach(wordSearch.grid, id: \.self) { column in
+                        LazyVGrid(columns: column.map({ char in
                             GridItem(.flexible())
                         })) {
-                            ForEach(row, id: \.self.id) { col in
+                            ForEach(column, id: \.self.id) { col in
                                 Text(col.value)
                             }
                         }
@@ -36,7 +36,7 @@ struct GameView: View {
         }
     }
 
-    var columns: [GridItem] {
+    var rows: [GridItem] {
         return self.wordSearch.grid.map { _ in
             return GridItem(.flexible())
         }

@@ -148,7 +148,7 @@ struct WordSearch {
                 break
             } // end placement while loop
 
-            if attempts >= 20 {
+            if attempts >= WordSearch.MAXATTEMPTS {
                 unplaced.append(originalWord)
             }
             colorno = (colorno + 1) % 6
