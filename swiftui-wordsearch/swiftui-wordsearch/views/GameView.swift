@@ -17,6 +17,11 @@ struct GameView: View {
         ZStack {
             LinearGradient.backgroundGradient.ignoresSafeArea()
             VStack {
+                HStack {
+                    ForEach(wordSearch.words, id: \.self) { word in
+                        Text(word)
+                    }
+                }
                 // Text("\(score)")
                 LazyHGrid(rows: self.rows) {
                     ForEach(wordSearch.grid, id: \.self) { column in
@@ -46,7 +51,7 @@ struct GameView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            GameView(wordSearch: WordSearch.WordSearchInfo(grid: [], solved: [], unplaced: []))
+            GameView(wordSearch: WordSearch.WordSearchInfo(words: [], height: 10, width: 10, grid: [], solved: [], unplaced: []))
         }
         .navigationViewStyle(.stack)
     }

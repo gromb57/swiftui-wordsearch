@@ -29,6 +29,9 @@ struct WordSearch {
     typealias Grid = [[Letter]]
     
     struct WordSearchInfo: Hashable {
+        var words: [String]
+        var height: Int
+        var width: Int
         var grid: Grid
         var solved: Grid
         var unplaced: [String]
@@ -170,7 +173,7 @@ struct WordSearch {
         }
 
         // give the user some stuff
-        return WordSearchInfo(grid: grid, solved: solved, unplaced: unplaced)
+        return WordSearchInfo(words: self.words, height: self.height, width: self.width, grid: grid, solved: solved, unplaced: unplaced)
     }
 
     /**
