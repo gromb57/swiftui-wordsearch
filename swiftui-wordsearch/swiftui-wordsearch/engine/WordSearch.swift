@@ -163,7 +163,7 @@ struct WordSearch {
         // put in filler characters
         for i in 0..<grid.count {
             for j in 0..<grid[i].count {
-                grid[i][j].id = (i + 1) * j
+                grid[i][j].id = i * grid[i].count + j
                 if grid[i][j].value.isEmpty {
                     solved[i][j].value = " "
                     let rand: Int = Int.random(in: 0..<self.letters.count)
